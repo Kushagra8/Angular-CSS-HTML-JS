@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Courses Test</title>
+  <style>
+    /* CSS styles go here */
+  </style>
+</head>
+<body ng-app="myApp">
+  <div ng-controller="myController">
+    <h1>{{ hi }}</h1>
+  </div>
+
+  <script>
+    var app = angular.module('myApp', []);
+
+    app.controller('myController', function($scope) {
+      $scope.message = 'Hello, AngularJS!';
+    });
+  </script>
+</body>
+</html>
