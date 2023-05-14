@@ -1,10 +1,12 @@
 (function () {
 'use strict';
 
-angular.module('myFirstApp', [])
+angular.module('NameCalculator', [])
 
-.controller('MyFirstController', function ($scope) {
+.controller('NameCalculatorController', function ($scope) {
+  $scope.name="d";
+  $scope.totalValue=5;
+});
 
-})
 
 })();
