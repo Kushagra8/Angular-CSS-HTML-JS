@@ -4,9 +4,21 @@
 angular.module('NameCalculator', [])
 
 .controller('NameCalculatorController', function ($scope) {
-  $scope.name="d";
-  $scope.totalValue=5;
+  $scope.name="";
+  $scope.totalValue=0;
+
+  $scope.displayNumeric=function(){
+    var totalNameValue=
+    calculatorNumericForString($scope.name); // get total value
+    $scope.totalValue=totalNameValue;
+  };
 });
 
+function calculatorNumericForString(string){
+  var totalStringValue = 0;
+  for (var i = 0; i < string.length; i++){
+    totalStringValue += string.CharCodeAt(i);
+  }
+}
 
 })();
