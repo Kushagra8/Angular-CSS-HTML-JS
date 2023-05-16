@@ -6,10 +6,13 @@
   
   MsgController.$inject = ['$scope', '$filter'];
   function MsgController ($scope, $filter) {
-      $scope.name = "Kush";
+      $scope.message = "message";
       $scope.upper = function () {
           var upCase = $filter('uppercase');
-          $scope.name = upCase($scope.name);
+          $scope.message = upCase($scope.message);
       };
+      $scope.sayMessage = function () {
+        return 'Kush likes to eat snacks';
+      }
   }
 })();
