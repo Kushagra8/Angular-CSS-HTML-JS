@@ -9,8 +9,13 @@
     <body>
         <h1>Expressions and Interpolation</h1>
         <div ng-controller='MsgController'>
-          {{message}} is: {{sayMessage()}} <br>
+          {{message}} {{sayMessage()}} <br>
           <input type="text" ng-model="message" ng-blur="upper();">
+          <div>
+            <button ng-click="feedDog()">Feed Dog</button>
+            <br>
+            <!-- ng- lets html know to not run this line until angularJS is ready -->
+            <img ng-src="{{hungerState}}.jpeg">
+          </div>
         </div>
     </body>
-</html>
