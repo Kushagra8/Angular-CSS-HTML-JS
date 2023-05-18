@@ -6,16 +6,17 @@
   
   MsgController.$inject = ['$scope', '$filter'];
   function MsgController ($scope, $filter) {
-      $scope.message = "Hi";
-      $scope.hungerState = "hungry";
-      $scope.upper = function () {
-          var upCase = $filter('uppercase');
-          $scope.message = upCase($scope.message);}
-      $scope.sayMessage = function () {
-        return 'Kush likes to eat snacks';}
-      $scope.feedDog = function() {
-        $scope.hungerState = "notHungry";
-      }
+    $scope.name = "Kush";
+    $scope.sayMessage = function () {
+      var msg = "I like to eat snacks";
+      var output = $filter('uppercase')(msg);
+      return output;
+    }
+    $scope.hungerState = "hungry";
+    $scope.cookieCost = .45;
+    $scope.feedDog = function() {
+      $scope.hungerState = "notHungry";
+    }
   };
   
 })();
