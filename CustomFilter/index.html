@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html ng-app="MsgApp">
-    <head>
-        <meta charset="utf-8">
-        <script src="angular.min.js"></script>
-        <script src="app.js"></script>
-        <title>Expressions and Interpolation</title>
-    </head>
-    <body>
-        <h1>Filters</h1>
-        <div ng-controller='MsgController'>
-          {{name}} says: {{sayMessage()}} <br>
-          <div>
-            <button ng-click="feedDog()">Feed Dog</button>
-            Cost: {{cookieCost | currency : "#blah" : 4}}
-            <br>
-            <!-- ng- lets html know to not run this line until angularJS is ready -->
-            <img ng-src="{{hungerState}}.jpeg">
-          </div>
+<html ng-app="CustomFilters">
+  <head>
+      <meta charset="utf-8">
+      <script src="angular.min.js"></script>
+      <script src="app.js"></script>
+      <title>Custom Filters</title>
+  </head>
+  <body>
+      <h1>Custom Filters</h1>
+      <div ng-controller='CustomFiltersController'>
+        Original: {{name}} says: {{sayMessage()}} <br>
+        New: {{name}} says: {{sayLovesMessage()}} <br>
+        <div>
+          <button ng-click="feedDog()">Feed Dog</button>
+          <!-- ng- lets html know to not run this line until angularJS is ready -->
+          <img ng-src="{{hungerState}}.jpeg">
         </div>
-    </body>
+      </div>
+  </body>
+</html>
