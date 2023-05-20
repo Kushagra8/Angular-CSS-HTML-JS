@@ -3,8 +3,10 @@
 
   angular.module('CustomFilters', [])
   .controller('CustomFiltersController', CustomFiltersController)
-  .filter('loves', LovesFilter);
+  .filter('loves', LovesFilter)
+  .filter('truth', TruthFilter);
   
+  // lovesFilter named as adding Filter to loves.
   CustomFiltersController.$inject = ['$scope', 'lovesFilter'];
   function CustomFiltersController ($scope, lovesFilter) {
     $scope.name = "Skye";
@@ -30,6 +32,14 @@
     return function (input){
       input = (input || "" );
       input = input.replace("like", "love");
+      return input;
+    };
+  }
+
+  function TruthFilter(){
+    return function (input, target, replace){
+      input = input || "";
+      input = input.replace(target, replace);
       return input;
     };
   }
