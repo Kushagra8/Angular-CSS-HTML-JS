@@ -21,6 +21,8 @@
       Original: {{name}} says: {{sayMessage()}} <br>
       New: {{name}} says: {{sayLovesMessage()}} <br>
       Truth: {{name}} says: {{sayLovesMessage() | truth : 'snacks' : 'treats'}} <br>
+      Big Truth: {{name}} says: {{sayLovesMessage() | truth : 'snacks' : 'treats' |
+      uppercase}} <br>
       <div>
         <button ng-click="feedDog()">Feed Dog</button> <br>
         <!-- ng- lets html know to not run this line until angularJS is ready -->
