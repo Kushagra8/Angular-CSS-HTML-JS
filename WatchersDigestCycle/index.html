@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html ng-app="CustomFilters">
+<html ng-app="CounterApp">
   <head>
     <meta charset="utf-8">
     <script src="angular.min.js"></script>
     <script src="app.js"></script>
-    <title>Custom Filters</title>
+    <title>ng-repeat</title>
   </head>
 
   <!-- background colour black -->
@@ -16,17 +16,13 @@
   </style>
 
   <body>
-    <h1>Custom Filters</h1>
-    <div ng-controller='CustomFiltersController'>
-      Original: {{name}} says: {{sayMessage()}} <br>
-      New: {{name}} says: {{sayLovesMessage()}} <br>
-      Truth: {{name}} says: {{sayLovesMessage() | truth : 'snacks' : 'treats'}} <br>
-      Big Truth: {{name}} says: {{sayLovesMessage() | truth : 'snacks' : 'treats' |
-      uppercase}} <br>
+    <h1>The Digest Cycle</h1>
+    <div ng-controller='CounterController'>
+      <button ng-click="showNumberOfWatchers()">
+        Log # of Watchers</button>
       <div>
-        <button ng-click="feedDog()">Feed Dog</button> <br>
-        <!-- ng- lets html know to not run this line until angularJS is ready -->
-        <img ng-src="{{hungerState}}.jpeg">
+        <button ng-click="countOnce()">Up Once Countern (once)</button>
+        <button ng-click="upCounter()">Increment Counter</button>
       </div>
     </div>
   </body>
