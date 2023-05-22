@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html ng-app="FilterArrayApp">
-  <!-- background colour black -->
-<style>
-  body {
-    background-color: black;
-    color: white;
-    font-size: 1.2em;
-  }
-</style>
-  <head>
-    <meta charset="utf-8">
-    <script src="angular.min.js"></script>
-    <script src="app.js"></script>
-    <title>Filter Array</title>
-  </head>
-  <body>
-    <h1>ng-repeat</h1>
-    <div ng-controller="ShoppingListController">
 
-      
-  </body>
+<head>
+  <meta charset="utf-8">
+  <script src="app.js"></script>
+  <style>
+    body {
+      font-size: 1.2em;
+      background-color: black;
+      color: white;
+    }
+  </style>
+  <title>ng-repeat</title>
+</head>
+
+<body>
+  <h1>ng-repeat</h1>
+  <div ng-controller='ShoppingListController'>
+    <!-- Searchable Shopping List: -->
+    <h3>Shopping List:</h3>
+    <input type="text" ng-model="search">
+    <ul>
+      <li ng-repeat="item in shoppingList | filter : search">{{ itemI}}</li>
+    </ul>
+  </div>
+</body>
+
 </html>
