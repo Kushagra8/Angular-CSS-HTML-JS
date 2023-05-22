@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html ng-app="BindingApp">
-  <!-- background colour black -->
-  <style>
-    body {
-      background-color: black;
-      color: white;
-    }
-  </style>
+<!-- background colour black -->
+<style>
+  body {
+    background-color: black;
+    color: white;
+  }
+</style>
 
-  <head>
-    <meta charset="utf-8">
-    <script src="angular.min.js"></script>
-    <script src="app.js"></script>
-    <title>2-way, 1-way & 1-time binding</title>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <script src="angular.min.js"></script>
+  <script src="app.js"></script>
+  <title>2-way, 1-way & 1-time binding</title>
+</head>
 
-  <body>
-    <h1>2-way, 1-way & 1-time binding</h1>
-    <div ng-controller='BindingController'>
-      <div>
-        <button ng-click="showNumberOfWatchers()">Log # of watchers</button>
-        <button ng-click="setFullName()">Set Full Name</button> <br>
+<body>
+  <h1>2-way, 1-way & 1-time binding</h1>
+  <div ng-controller='BindingController'>
+    <div>
+      <button ng-click="showNumberOfWatchers()">Log # of watchers</button>
+      <button ng-click="setFullName()">Set Full Name</button> <br>
 
-        <!-- { :: var} means that watcher is removed once var updated-->
-        Full name is: {{ :: fullName }} <br>
+      <!-- { :: var} means that watcher is removed once var updated-->
+      Full name is: {{ :: fullName }} <br>
 
-        <!-- {var} means that watcher will always update car automaticaly-->
-        First name is: {{firstName }} <br>
-        <button ng-click="logFirstName()">Log First Name</button><br>
-        <button ng-click="logFullName()">Log Full Name</button><br>
-      </div>
-      <div>
-        <input type="text" ng-model="firstName"> <br>
-      </div>
+      <!-- {var} means that watcher will always update car automaticaly-->
+      First name is: {{firstName }} <br>
+      <button ng-click="logFirstName()">Log First Name</button><br>
+      <button ng-click="logFullName()">Log Full Name</button><br>
     </div>
-  </body>
+    <div>
+      <input type="text" ng-model="firstName"> <br>
+    </div>
+  </div>
+</body>
+
 </html>

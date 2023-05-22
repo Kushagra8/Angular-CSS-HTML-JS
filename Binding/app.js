@@ -2,13 +2,13 @@
   'use strict';
 
   angular.module('BindingApp', [])
-  .controller('BindingController', BindingController);
-  
+    .controller('BindingController', BindingController);
+
   BindingController.$inject = ['$scope'];
-  function BindingController ($scope) {
+  function BindingController($scope) {
     $scope.firstName = "Kush";
     // $scope.fullName = "";
-    
+
     $scope.showNumberOfWatchers = function () {
       console.log('# of watchers: ', $scope.$$watchersCount);
     };
