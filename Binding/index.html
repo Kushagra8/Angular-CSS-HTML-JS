@@ -22,7 +22,11 @@
         <button ng-click="showNumberOfWatchers()">Log # of watchers</button>
         <button ng-click="setFullName()">Set Full Name</button> <br>
 
+        <!-- { :: var} means that watcher is removed once var updated-->
         Full name is: {{ :: fullName }} <br>
+
+        <!-- {var} means that watcher will always update car automaticaly-->
+        First name is: {{firstName }} <br>
         <button ng-click="logFirstName()">Log First Name</button><br>
         <button ng-click="logFullName()">Log Full Name</button><br>
       </div>

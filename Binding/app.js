@@ -7,7 +7,7 @@
   BindingController.$inject = ['$scope'];
   function BindingController ($scope) {
     $scope.firstName = "Kush";
-    $scope.fullName = "";
+    // $scope.fullName = "";
     
     $scope.showNumberOfWatchers = function () {
       console.log('# of watchers: ', $scope.$$watchersCount);
