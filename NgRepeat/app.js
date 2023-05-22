@@ -20,6 +20,15 @@
 
   function ShoppingListController($scope){
     $scope.shoppingList1 = shoppingList1;
-    $scope.shoppingList2 = shoppingList1;
+    $scope.shoppingList2 = shoppingList2;
   }
+
+  // function PrintElements($scope, shoppingList)  {
+  //   // Loop through the array and append each string to the output element
+  //   for (var i = 0; i < shoppingList.length; i++) {
+  //     var string = shoppingList[i];
+  //     outputElement.innerHTML += string + "<br>";
+  //   }
+  // }
+
 }) ();

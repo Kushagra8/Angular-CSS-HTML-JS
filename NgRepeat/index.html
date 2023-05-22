@@ -14,20 +14,20 @@
     <script src="app.js"></script>
     <title>ng-repeat</title>
   </head>
-    <body>
-      <h1>ng-repeat</h1>
-      <div ng-controller="ShoppingListController">
-        <!-- Shopping List #1 -->
-        <h3>Shopping List:</h3>
-        <ul>
-          <li ng-repeat="item in shoppigList1">{{item}}</li>
-        </ul>
+  <body>
+    <h1>ng-repeat</h1>
+    <div ng-controller="ShoppingListController">
 
-        <!-- Shopping List #2 -->
-        <!-- <ul>
-          <li ng-repeat="item in shoppigList2">{{item.quantity}} of {{item.name}}</li>
-        </ul> -->
-      </div>
-    </body>
-  
+      <!-- <h3>Shopping List:</h3>
+      <ul>
+        <li ng-repeat="item in shoppingList1">{{item}}</li>
+      </ul>  -->
+
+      <h3>Shopping List: </h3>
+      <ul>
+        <li ng-repeat="item in shoppingList2">{{item.quantity}} of {{item.name}}(s)</li>
+      </ul>
+
+    </div>
+  </body>
 </html>
