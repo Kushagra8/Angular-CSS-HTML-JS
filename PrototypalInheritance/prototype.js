@@ -1,3 +1,9 @@
+(function () {
+  'use strict';
+
+  angular.module('PrototypalApp', []);
+})();
+
 //** Prototypal inheritance
 var parent = {
   value: "parentValue",
